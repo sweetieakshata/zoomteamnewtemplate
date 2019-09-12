@@ -1,0 +1,276 @@
+<!-- Dashboard design -->
+<ul class="nav justify-content-end">
+    <h1 class="header">My Dashboard</h1>
+    <li class="nav-item">
+      <a class="nav-link active" href="#"> <i class="fa fa-users" aria-hidden="true"></i>My Dashboard</a>
+    </li>
+    <div class="vertical">
+
+    </div>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa fa-list" aria-hidden="true"></i>Leave/Vacation Management</a>
+    </li>
+    <div class="vertical">
+
+    </div>
+    <li class="nav-item">
+      <a class="nav-link" href="#"><i class="fa fa-book" aria-hidden="true"></i>Holidy List</a>
+    </li>
+    <div class="vertical">
+
+    </div>
+    <li class="nav-item">
+      <a class="nav-link " href="#"><i class="fa fa-table" aria-hidden="true"></i>Organization Chart</a>
+    </li>
+  </ul>
+  <div class="container-fluid maincontainer">
+
+      <div class="first-container">
+        <div style="min-width: 100%;">
+
+
+          <div class="col3Card">
+            <div class="card" style="width: 24rem;">
+              <div class="card-body">
+                <div class="card-sec">
+                  <span class="card-one">MY DEPARTMENT(S) </span><br />
+                  <span class="card-minititle">Yourdrs - Web Development </span><br />
+
+                  <small class="card-paragraph">You are currently associated to Know more about this department.
+                    department(s)..</small>
+                </div>
+                <div class="icon">
+                  <img src="assets/24px.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col3Card">
+            <div class="card" style="width: 25rem; height: 16rem;">
+
+              <div class="card-body">
+                <div class="card-sec">
+
+                  <span class="card-one">MY MANAGER</span><br />
+                  <h1 class="mgr-name">Man Shiv</h1>
+                  <small class="card-paragraph">Since 4/23/2019, You are reporting to Man Shiv. know more about your
+                    manager.</small>
+                </div>
+                <div class="icon">
+                  <img class="height" src="assets/shuffle.svg">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col6Card">
+            <div class="card" style="width: 60rem; height: 20rem;">
+              <div class="card-body">
+                <table class="table table-striped" style="margin-top:20px;">
+                  <thead>
+                    <tr class="table-head">
+                      <th scope="col">Leave / Vacation Type</th>
+                      <th scope="col">Requested Date</th>
+                      <th scope="col">Applied for</th>
+                      <th scope="col">Status</th>
+                      <th scope="col">Sent to
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row" class="leave-type">Earned Leave</th>
+                      <td>Aug 25, 2014 </td>
+                      <td>Sept 7, 2014 </td>
+                      <td>Pending</td>
+                      <td>Othon Mourkakos</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="leave-type">Sick Leave</th>
+                      <td>Jul 14, 2013 </td>
+                      <td>Jul 27, 2013 </td>
+                      <td>Approved</td>
+                      <td>Othon Mourkakos</td>
+                    </tr>
+                    <tr>
+                      <th scope="row" class="leave-type">Sick Leave</th>
+                      <td>Jan 1, 2013 </td>
+                      <td>Jan 1, 2013 </td>
+                      <td>Approved</td>
+                      <td>Othon Mourkakos</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+
+
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+
+    <!-- ////////expansion pannel -->
+
+    <div class="expansion">
+
+      <p>
+        <mat-expansion-panel [(expanded)]="xpandStatus">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <h2 class="ptitle">Personal Information</h2>
+            </mat-panel-title>
+            <mat-panel-description> </mat-panel-description>
+          </mat-expansion-panel-header>
+          <!-- Two-way binding on the expanded attribute gives us a way to store and manipulate the expansion status. -->
+          <div class="panel-body" style="display: block;">
+            <div>
+
+              <table cellpadding="1" cellspacing="1" class="table table-condensed table-striped">
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="formlabel">First Name</span>
+                      <br>
+                      <h5 class="formdisplay">Admin</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Last Name</span>
+                      <br>
+                      <h5 class="formdisplay">Manju</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">DOB</span>
+                      <br>
+                      <h5 class="formdisplay">1/1/0001</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Gender</span>
+                      <br>
+                      <h5 class="formdisplay">M</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Date of Joining</span>
+                      <br>
+                      <h5 class="formdisplay">1/1/0001</h5>
+
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="formlabel">Address1</span>
+                      <br>
+                      <h5 class="formdisplay">Vijay</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Address2</span>
+                      <br>
+                      <h5 class="formdisplay">-NA-</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">City</span>
+                      <br>
+                      <h5 class="formdisplay">Banglore</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">State</span>
+                      <br>
+                      <h5 class="formdisplay">Karnataka</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Country</span>
+                      <br>
+                      <h5 class="formdisplay">India</h5>
+
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="formlabel">Race</span>
+                      <br>
+                      <h5 class="formdisplay">Race 1</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Ethnicity</span>
+                      <br>
+                      <h5 class="formdisplay">Ethnicity 1</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Marital Status</span>
+                      <br>
+                      <h5 class="formdisplay">Married</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Language</span>
+                      <br>
+                      <h5 class="formdisplay">English</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">SSN / Govt.Id</span>
+                      <br>
+                      <h5 class="formdisplay">XXX-XXXX-1234</h5>
+
+                    </td>
+
+
+
+
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="formlabel">Email Address</span>
+                      <br>
+                      <h5 class="formdisplay">admin@gmail.com</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Cell Phone</span>
+                      <br>
+                      <h5 class="formdisplay">8061405800</h5>
+
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="formlabel">Home Phone</span>
+                      <br>
+                      <h5 class="formdisplay">8061405800</h5>
+
+                    </td>
+                    <td>
+                      <span class="formlabel">Work Phone</span>
+                      <br>
+                      <h5 class="formdisplay">8061405800</h5>
+
+                    </td>
+                    <td colspan="3">
+                      <span class="formlabel">Extension</span>
+                      <br>
+                      <h5 class="formdisplay">123</h5>
+
+                    </td>
+
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </mat-expansion-panel>
+</p>
+</div>

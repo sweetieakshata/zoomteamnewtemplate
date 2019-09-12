@@ -1,0 +1,103 @@
+
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom box-shadow">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Manage Designation</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown" style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;">
+    Manage Organizations &amp; Users
+    </a>
+    <div class="dropdown-menu">
+    <a class="dropdown-item" routerLink='/design1'>All Documents</a>
+    <a class="dropdown-item" routerLink="/design">Designations</a>
+    </div>
+
+
+
+    <a class="dropdown-toggle" href="#" data-toggle="dropdown" style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;" aria-expanded="true">
+    <i class="fa fa-plus"></i> Create Project
+    </a>
+    <a href="#" id="sidebar" class="right-sidebar-toggle" style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;">
+    <i class="fa fa-clock-o"></i>Time Sheets
+    </a>
+    <a href="#" style="color: #3498db;padding: 8px;font-size: 10pt;height:34px !important;font-weight: 600;border-right: 1px solid #f1f1f1;">
+    <i class="fa fa-edit"></i> Edit Project
+    </a>
+    </nav>
+    <!-- <a class="btn btn-outline-primary" href="#">Sign up</a> -->
+    </div>
+
+    <h1 class='float-left text' id='text-color-title'>{{title | titlecase}}</h1>
+    <div class='container buttonAdd'>
+    <button class="btn btn-lg btn-warning text-white float-right" (click)="openAdd(kiran,'Add')">Add new Designation</button>
+    </div>
+    <br><br><br><br>
+    <div class='container' id='search'>
+    <form class="form-inline mr-auto ">
+    <input class="form-control " type="text" placeholder="Search for Designation" aria-label="Search" (keyup)='onSearch(d.value)' name='n1' #d id='search-box-round'>
+    </form>
+    </div><br>
+    <!-- table -->
+    <table class='table table-striped table-sm table-responsive-sm'>
+    <thead class='table-title'>
+    <tr>
+    <td>Index</td>
+    <td>Name</td>
+    <td>Description</td>
+    <td><i id='text-align-right'>Actions</i></td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of arrDesig; let i=index">
+    <td>{{i+1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.description}}</td>
+    <td>
+    <button class="btn btn-secondary" (click)="openEdit(kiran,'Edit',i,item)"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button> |
+    <button class="btn btn-danger" (click)="onDesigDelete(item.id)"><i class="fa fa-trash" aria-hidden="true"></i></button></td>
+    </tr>
+    </tbody>
+    </table>
+
+    <ng-template #kiran let-modal>
+    <div class="modal-header">
+    <h4>{{selectedDesignationOption}} Designation</h4>
+    <button type="button" class="close bg bg-danger" (click)="modal.dismiss('Cross click')">
+    <span aria-hidden="true">Close</span>
+    </button>
+    </div>
+    <div class="modal-body">
+    <!-- <div class='col-6'> -->
+    <form (ngSubmit)='onFormSubmit(f)' #f="ngForm">
+    <table>
+    <tr>
+    <td><div class="form-group">
+    <label for="designation">Designation</label>
+    <div class="input-group">
+    <input id="designation" class="form-control" [(ngModel)]="name" placeholder="Name" name="Name" required>
+    <div class="input-group-append">
+    <!-- <button class="btn btn-outline-secondary" (click)="dp.toggle()" type="button"></button> -->
+    </div>
+    </div>
+    </div>
+
+    </td>
+    <td> <div class="form-group">
+    <label for="description">Description</label>
+    <div class="input-group">
+    <input id="description" class="form-control" [(ngModel)]="description" placeholder="Description" name="Description" required>
+    <div class="input-group-append">
+    <!-- <button class="btn btn-outline-secondary" (click)="dp.toggle()" type="button"></button> -->
+    </div>
+    </div>
+    </div>
+    </td>
+    </tr>
+    </table>
+    <div class="modal-footer">
+    <button type="submit" class="btn btn-outline-dark" >{{selectedDesignationOption}} Designation</button>
+    </div>
+    </form>
+    </div>
+    <!-- </div> -->
+
+    </ng-template>
